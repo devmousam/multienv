@@ -1,11 +1,11 @@
 on:
-  pull_request:
+  workflow_dispatch:
     branches:
     - dev
 jobs:
   DEV:
     name: deploy to dev
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - name: run a script
