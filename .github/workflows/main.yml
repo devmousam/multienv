@@ -2,6 +2,10 @@ on:
   pull_request:
     branches:
     - dev
+
+env:
+  # Setting an environment variable with the value of a configuration variable
+  API_URL_NEW: ${{ vars.API_URL }}
 jobs:
   DEV:
     name: deploy to dev
@@ -9,9 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: run a script
-        run: env
-        env:
-          API_URL: ${{ vars.API_URL }}
-          API_KEY: 'SSSSSSSSSSSS'
+        run: |
+          echo "============================= $API_URL_NEW"
 
       
