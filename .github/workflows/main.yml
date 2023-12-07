@@ -11,7 +11,7 @@ jobs:
       - name: run a script
         run: env
         env:
-          API_URL: ${{env.API_URL}}
+          API_URL: $API_URL
           API_KEY: 'SSSSSSSSSSSS'
 
       
