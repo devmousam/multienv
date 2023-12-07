@@ -1,0 +1,14 @@
+on:
+  pull_request:
+    branches:
+    - main
+jobs:
+  DEV:
+    name: deploy to dev
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+      - name: run a script
+        run: |
+          echo "I am running a job in dev environment"
+      
