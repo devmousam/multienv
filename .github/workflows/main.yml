@@ -5,9 +5,9 @@ on:
 jobs:
   DEV:
     name: deploy to dev
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: run a script
         run: |
           echo "I am running a job in dev environment"
