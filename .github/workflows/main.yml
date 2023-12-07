@@ -9,10 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: run a script
-        run: |
-          echo "I am running a job in dev environment $API_KEY $API_URL"
+        run: env
         env:
           API_URL: ${{env.API_URL}}
           API_KEY: 'SSSSSSSSSSSS'
-          
+
       
