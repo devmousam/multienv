@@ -1,5 +1,5 @@
 on:
-  workflow_dispatch:
+  pull_request:
     branches:
     - dev
 jobs:
@@ -10,5 +10,5 @@ jobs:
       - uses: actions/checkout@v1
       - name: run a script
         run: |
-          echo "I am running a job in dev environment"
+          echo "I am running a job in dev environment ${{env.API_URL}}"
       
