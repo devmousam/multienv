@@ -13,7 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: run a script
-        run: |
-          echo "============================= $API_URL_NEW"
+        run: echo "${{secrets.API_URL}}"
 
       
